@@ -78,6 +78,12 @@ app.put("/api/workouts/:id", function (req, res) {
   );
 });
 
+// this route will get all the workouts from the data base
+app.get("/api/workouts", function(req, res) {
+  db.Workout.find({}).then(function(dbWorkouts) {
+    res.json(dbWorkouts);
+  });
+});
 
 
 app.listen(PORT, () => {
