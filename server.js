@@ -14,11 +14,8 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
 // app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
-
-
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", {
   useNewUrlParser: true,
@@ -42,7 +39,14 @@ app.get("/stats", (req, res) => {
 //! Backend Routes
 // this route is for the dashboard display
 app.get("/api/workouts/range", function (req, res) {
-  db.Workout.find({}).then(function (dbWorkouts) {
+  db.Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: { $sum: "$exercises.duration" },
+      },
+    },
+  ]).then(function (dbWorkouts) {
+    console.log(dbWorkouts);
     res.json(dbWorkouts);
   });
 });
@@ -83,12 +87,21 @@ app.put("/api/workouts/:id", function (req, res) {
 });
 
 // this route will get all the workouts from the data base
-app.get("/api/workouts", function(req, res) {
-  db.Workout.find({}).then(function(dbWorkouts) {
-    res.json(dbWorkouts);
-  });
+app.get("/api/workouts", function (req, res) {
+  db.Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: { $sum: "$exercises.duration" },
+      },
+    },
+  ])
+    .then((dbWorkouts) => {
+      res.json(dbWorkouts);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 });
-
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
