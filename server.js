@@ -20,9 +20,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", {
   useNewUrlParser: true,
 });
 
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
-});
 
 // db.on("error", error => {
 //   console.log("Database Error:", error);
@@ -47,4 +44,26 @@ app.get("/api/workouts/range", function (req, res) {
   });
 });
 
+// this route creates a new workout
+app.post("/api/workouts", function (req, res) {
+  console.log(req.body);
+  db.Workout.create(req.body).then(function (dbWorkouts) {
+    db.Workout.findOneAndUpdate(
+      { _id: dbWorkouts._id },
+      { $push: { exercises: req.body } },
+      function (error, success) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(success);
+        }
+      }
+    );
+    res.json(dbWorkouts);
+  });
+});
 
+
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}!`);
+});
