@@ -36,13 +36,7 @@ app.get("/stats", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/stats.html"));
 });
 
-//! Backend Routes
-// this route is for the dashboard display
-app.get("/api/workouts/range", function (req, res) {
-  db.Workout.find({}).then(function (dbWorkouts) {
-    res.json(dbWorkouts);
-  });
-});
+
 
 // this route creates a new workout
 app.post("/api/workouts", function (req, res) {
@@ -63,6 +57,13 @@ app.post("/api/workouts", function (req, res) {
   });
 });
 
+//! Backend Routes
+// this route is for the dashboard display
+app.get("/api/workouts/range", function (req, res) {
+  db.Workout.find({}).then(function (dbWorkouts) {
+    res.json(dbWorkouts);
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
