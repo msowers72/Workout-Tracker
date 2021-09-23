@@ -20,7 +20,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", {
   useNewUrlParser: true,
 });
 
-
 // db.on("error", error => {
 //   console.log("Database Error:", error);
 // });
@@ -36,7 +35,13 @@ app.get("/stats", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/stats.html"));
 });
 
-
+//! Backend Routes
+// this route is for the dashboard display
+app.get("/api/workouts/range", function (req, res) {
+  db.Workout.find({}).then(function (dbWorkouts) {
+    res.json(dbWorkouts);
+  });
+});
 
 // this route creates a new workout
 app.post("/api/workouts", function (req, res) {
@@ -57,13 +62,23 @@ app.post("/api/workouts", function (req, res) {
   });
 });
 
-//! Backend Routes
-// this route is for the dashboard display
-app.get("/api/workouts/range", function (req, res) {
-  db.Workout.find({}).then(function (dbWorkouts) {
-    res.json(dbWorkouts);
-  });
+// this allows you to get a workout by id
+app.put("/api/workouts/:id", function (req, res) {
+  let id = req.params.id;
+  db.Workout.findOneAndUpdate(
+    { _id: id },
+    { $push: { exercises: req.body } },
+    function (error, success) {
+      if (error) {
+        console.log(error);
+      } else {
+        res.send(success);
+      }
+    }
+  );
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
