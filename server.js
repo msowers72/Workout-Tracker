@@ -19,6 +19,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 });
 
 // db.on("error", error => {
