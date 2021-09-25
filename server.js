@@ -3,11 +3,12 @@ const path = require("path");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 
-// code to start my app
+// code to start my server
 const PORT = process.env.PORT || 3000;
 
 const db = require("./models");
 
+// start my app
 const app = express();
 
 // middle ware
