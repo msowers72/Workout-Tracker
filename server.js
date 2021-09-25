@@ -10,8 +10,10 @@ const db = require("./models");
 
 const app = express();
 
+// middle ware
 app.use(logger("dev"));
 
+// middle ware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
