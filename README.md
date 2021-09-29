@@ -1,11 +1,13 @@
 # Workout-Tracker
 
 # Table of Contents
-- [username](#username)
-- [description](#description)
-- [installation](#installation)
-- [usage](#usage)
-- [licenses](#licenses)
+- [Username](#username)
+- [Email](#emial)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Licenses](#licenses)
+- [Deployed](#deployed)
 
 
 ## GitHub Username
@@ -32,7 +34,9 @@ The application will be used to generate a professional README for various proje
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- ![Tux, the Linux mascot](https://img.shields.io/badge/License-MIT-green) -->
   
- ![images](https://user-images.githubusercontent.com/80433477/126913769-34b01e97-fe0f-466d-be29-42b9a8bdb5cc.jpg) 
-
-
+ ## Deployed
+ [](https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc)
+ 
  https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc
+
+ ![images](https://user-images.githubusercontent.com/80433477/126913769-34b01e97-fe0f-466d-be29-42b9a8bdb5cc.jpg) 
