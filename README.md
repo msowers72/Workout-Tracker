@@ -17,7 +17,13 @@
 <msowers72@yahoo.com>
 
 ## Description:
-Generate a professional README using the command-line
+Today, the global gym industry has an estimated worth of over $96.7 billion dollars, 
+and there are over 37,000 fitness applications, available in the Google Play store.
+I've created a very simple and free fitness application that will allow users to track,
+two different types of workouts. 
+
+## Usage
+The application will be used to generate a professional README for various projects
 
 ## Installation
 * STEP 1: Set-up GitHub repo
@@ -26,9 +32,6 @@ Generate a professional README using the command-line
 * STEP 4: Download the inquier package and node-modules
 * STEP 5: Create your index.js file and create the code required to generate the README
 * STEP 6: Generate the README from the terminal    
-
-## Usage
-The application will be used to generate a professional README for various projects
 
 ## Licenses 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
