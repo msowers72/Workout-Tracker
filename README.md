@@ -40,4 +40,5 @@ The application will be used to generate a professional README for various proje
  
  https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc
 
- ![images](https://user-images.githubusercontent.com/80433477/126913769-34b01e97-fe0f-466d-be29-42b9a8bdb5cc.jpg) 
+ ![images](./assets/screenshots/Capture.PNG) 
+ ![images](./assets/screenshots/Capture2.PNG) 
