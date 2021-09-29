@@ -38,11 +38,10 @@ your exercises.
 <!-- ![Tux, the Linux mascot](https://img.shields.io/badge/License-MIT-green) -->
   
  ## Deployed
- [Workout Trakcer Link](https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc)
+ [Workout Tracker Link](https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc)
  
  
  ![images](./assets/screenshots/Capture.PNG) 
  ![images](./assets/screenshots/Capture2.PNG) 
 
 
- https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc
