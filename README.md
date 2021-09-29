@@ -23,7 +23,9 @@ I've created a very simple and free fitness application that will allow users to
 two different types of workouts. 
 
 ## Usage
-The application will be used to generate a professional README for various projects
+As a user, I will be able to track my daily cardio and resistance workouts.
+The application tracks, the name, type, weight, sets, reps and the duration of
+your exercises.
 
 ## Dependencies
 * Express
@@ -38,7 +40,9 @@ The application will be used to generate a professional README for various proje
  ## Deployed
  [](https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc)
  
- https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc
-
+ 
  ![images](./assets/screenshots/Capture.PNG) 
  ![images](./assets/screenshots/Capture2.PNG) 
+
+
+ https://young-retreat-50235.herokuapp.com/?id=614d1e2bf18c4e0016de5bcc
