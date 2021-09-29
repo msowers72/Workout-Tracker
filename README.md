@@ -4,7 +4,7 @@
 - [Username](#username)
 - [Email](#emial)
 - [Description](#description)
-- [Installation](#installation)
+- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Licenses](#licenses)
 - [Deployed](#deployed)
@@ -25,13 +25,11 @@ two different types of workouts.
 ## Usage
 The application will be used to generate a professional README for various projects
 
-## Installation
-* STEP 1: Set-up GitHub repo
-* STEP 2: Create a project folder using the command-line
-* STEP 3:  Use Git-Clone to link your folder to GitHub
-* STEP 4: Download the inquier package and node-modules
-* STEP 5: Create your index.js file and create the code required to generate the README
-* STEP 6: Generate the README from the terminal    
+## Dependencies
+* Express
+* Mongoose
+* Morgan
+   
 
 ## Licenses 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
